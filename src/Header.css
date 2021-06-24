@@ -1,0 +1,13 @@
+.header {
+  background-color: red;
+  align-items: center;
+  display: flex;
+}
+
+.header > h1 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
