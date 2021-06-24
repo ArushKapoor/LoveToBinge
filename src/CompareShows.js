@@ -8,6 +8,8 @@ function CompareShows() {
   // Calling in the data layer/ global variable
   const [{ posts }] = useStateValue();
 
+  const [nextShow, setNextShow] = useState(false);
+
   console.log(posts);
 
   const [firstShow, setFirstShow] = useState([]);
@@ -16,8 +18,19 @@ function CompareShows() {
   useEffect(() => {
     console.log("These are posts", posts[0]);
 
+    let firstIndex = Math.floor(Math.random() * posts.length);
+    let secondIndex = Math.floor(Math.random() * posts.length);
+
+    while (typeof posts[0] != "undefined" && firstIndex == secondIndex) {
+      secondIndex = Math.floor(Math.random() * posts.length);
+    }
+
+    console.log(
+      `FirstIndex: ${firstIndex} ${posts[firstIndex]}, SecondIndex: ${secondIndex} ${posts[secondIndex]}`
+    );
+
     db.collection("anime")
-      .doc(posts[0])
+      .doc(posts[firstIndex])
       .get()
       .then((doc) => {
         if (doc.exists) {
@@ -33,7 +46,7 @@ function CompareShows() {
       });
 
     db.collection("anime")
-      .doc(posts[1])
+      .doc(posts[secondIndex])
       .get()
       .then((doc) => {
         if (doc.exists) {
@@ -47,7 +60,7 @@ function CompareShows() {
       .catch((error) => {
         console.log("Error getting document:", error);
       });
-  }, [posts]);
+  }, [posts, nextShow]);
 
   const showName = (name) => {
     console.log("Clicked", name);
@@ -111,6 +124,7 @@ function CompareShows() {
                 console.log(
                   `newRatingFirst: ${newRatingFirst}, newRatingSecond: ${newRatingSecond}`
                 );
+                setNextShow(!nextShow);
               } else {
                 // doc.data() will be undefined in this case
                 console.log("No such document!");
