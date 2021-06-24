@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Home.css";
 import CompareShows from "./CompareShows";
-import { db } from "./firebase.js";
-import { useStateValue } from "./StateProvider";
 
 function Home() {
   return (
