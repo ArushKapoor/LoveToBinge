@@ -124,6 +124,31 @@ function CompareShows() {
                 console.log(
                   `newRatingFirst: ${newRatingFirst}, newRatingSecond: ${newRatingSecond}`
                 );
+
+                db.collection("anime")
+                  .doc(firstShow?.name)
+                  .update({
+                    rating: newRatingFirst,
+                  })
+                  .then(() => {
+                    console.log("Worked fine");
+                  })
+                  .catch((error) => {
+                    console.log("Caught error:", error);
+                  });
+
+                db.collection("anime")
+                  .doc(secondShow?.name)
+                  .update({
+                    rating: newRatingSecond,
+                  })
+                  .then(() => {
+                    console.log("Worked fine");
+                  })
+                  .catch((error) => {
+                    console.log("Caught error:", error);
+                  });
+
                 setNextShow(!nextShow);
               } else {
                 // doc.data() will be undefined in this case
