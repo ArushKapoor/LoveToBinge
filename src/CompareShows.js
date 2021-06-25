@@ -6,7 +6,7 @@ import { db } from "./firebase.js";
 
 function CompareShows() {
   // Calling in the data layer/ global variable
-  const [{ posts }] = useStateValue();
+  const [{ posts, skipShow }] = useStateValue();
 
   const [nextShow, setNextShow] = useState(false);
 
@@ -60,7 +60,7 @@ function CompareShows() {
       .catch((error) => {
         console.log("Error getting document:", error);
       });
-  }, [posts, nextShow]);
+  }, [posts, nextShow, skipShow]);
 
   const showName = (name) => {
     console.log("Clicked", name);

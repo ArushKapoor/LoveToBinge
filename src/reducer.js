@@ -1,6 +1,7 @@
 // This is the initial state of the data layer
 export const initialState = {
   posts: [],
+  skipShow: false,
 };
 
 // This is where we create the reducer which has state and actions which
@@ -16,6 +17,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         posts: action.item?.posts,
+      };
+
+    case "CHANGE_SHOW":
+      return {
+        ...state,
+        skipShow: action.skipShow,
       };
 
     default:
