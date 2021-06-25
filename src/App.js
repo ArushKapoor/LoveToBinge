@@ -5,6 +5,7 @@ import Header from "./Header";
 import Home from "./Home";
 import { useStateValue } from "./StateProvider";
 import { db } from "./firebase.js";
+import Ranking from "./Ranking";
 
 function App() {
   // Calling in the data layer/ global variable
@@ -38,6 +39,10 @@ function App() {
     <div className="app">
       <Router>
         <Switch>
+          <Route path="/ranking">
+            <Header />
+            <Ranking />
+          </Route>
           <Route path="/">
             <Header />
             <Home />
