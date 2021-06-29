@@ -7,10 +7,10 @@ import RankShow from "./RankShow";
 function Ranking() {
   const [shows, setShows] = useState([]);
 
-  const [{ posts }] = useStateValue();
+  const [{ posts, filter }] = useStateValue();
 
   useEffect(() => {
-    db.collection("anime")
+    db.collection(filter)
       .get()
       .then((querySnapshot) => {
         var entries = [];
@@ -27,7 +27,7 @@ function Ranking() {
       .catch((error) => {
         console.log("Error getting documents: ", error);
       });
-  }, []);
+  }, [filter]);
 
   return (
     <div className="ranking">

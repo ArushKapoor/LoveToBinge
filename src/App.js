@@ -9,12 +9,13 @@ import Ranking from "./Ranking";
 
 function App() {
   // Calling in the data layer/ global variable
-  const [{}, dispatch] = useStateValue();
+  const [{ filter }, dispatch] = useStateValue();
 
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("anime")
+    console.log("Filter in App.js ", filter);
+    db.collection(filter)
       .get()
       .then((querySnapshot) => {
         var entries = [];
@@ -33,7 +34,7 @@ function App() {
       .catch((error) => {
         console.log("Error getting documents: ", error);
       });
-  }, []);
+  }, [filter]);
 
   return (
     <div className="app">

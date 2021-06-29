@@ -2,6 +2,7 @@
 export const initialState = {
   posts: [],
   skipShow: false,
+  filter: "shows",
 };
 
 // This is where we create the reducer which has state and actions which
@@ -23,6 +24,13 @@ const reducer = (state, action) => {
       return {
         ...state,
         skipShow: action.skipShow,
+      };
+
+    case "CHANGE_FILTER":
+      console.log("Filter ", action.filter);
+      return {
+        ...state,
+        filter: action.filter,
       };
 
     default:

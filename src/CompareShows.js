@@ -6,7 +6,7 @@ import { db } from "./firebase.js";
 
 function CompareShows() {
   // Calling in the data layer/ global variable
-  const [{ posts, skipShow }] = useStateValue();
+  const [{ posts, skipShow, filter }] = useStateValue();
 
   const [nextShow, setNextShow] = useState(false);
 
@@ -29,7 +29,7 @@ function CompareShows() {
       `FirstIndex: ${firstIndex} ${posts[firstIndex]}, SecondIndex: ${secondIndex} ${posts[secondIndex]}`
     );
 
-    db.collection("anime")
+    db.collection(filter)
       .doc(posts[firstIndex])
       .get()
       .then((doc) => {
@@ -45,7 +45,7 @@ function CompareShows() {
         console.log("Error getting document:", error);
       });
 
-    db.collection("anime")
+    db.collection(filter)
       .doc(posts[secondIndex])
       .get()
       .then((doc) => {
@@ -67,7 +67,7 @@ function CompareShows() {
 
     let ratingFirst, ratingSecond;
 
-    db.collection("anime")
+    db.collection(filter)
       .doc(firstShow?.name)
       .get()
       .then((doc) => {
@@ -76,7 +76,7 @@ function CompareShows() {
           // setFirstShow(doc.data());
           // console.log("This is data ", doc.data().rating);
           ratingFirst = doc.data().rating;
-          db.collection("anime")
+          db.collection(filter)
             .doc(secondShow?.name)
             .get()
             .then((doc) => {
@@ -125,7 +125,7 @@ function CompareShows() {
                   `newRatingFirst: ${newRatingFirst}, newRatingSecond: ${newRatingSecond}`
                 );
 
-                db.collection("anime")
+                db.collection(filter)
                   .doc(firstShow?.name)
                   .update({
                     rating: newRatingFirst,
@@ -137,7 +137,7 @@ function CompareShows() {
                     console.log("Caught error:", error);
                   });
 
-                db.collection("anime")
+                db.collection(filter)
                   .doc(secondShow?.name)
                   .update({
                     rating: newRatingSecond,
