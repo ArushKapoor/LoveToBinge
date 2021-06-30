@@ -24,6 +24,9 @@ function Home() {
         <Link to="/ranking">
           <button>Ranking</button>
         </Link>
+        <Link to="/feedback">
+          <button>Feedback Form</button>
+        </Link>
       </div>
     </div>
   );

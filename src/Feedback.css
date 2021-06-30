@@ -1,0 +1,39 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback > h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__name {
+  display: flex;
+}
+
+.feedback__name > input {
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+.feedback__feedback {
+  display: flex;
+}
+
+.feedback__feedback > textarea {
+  margin-bottom: 20px;
+  width: 40%;
+  height: 100px;
+}
+
+.feedback__submit {
+  margin-bottom: 20px;
+  width: 10%;
+  height: 10%;
+}

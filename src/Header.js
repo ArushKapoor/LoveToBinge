@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import { useStateValue } from "./StateProvider";
 
-function Header() {
+function Header({ showOptions = true }) {
   const [{}, dispatch] = useStateValue();
 
   const setFilter = (filter) => {
@@ -17,10 +17,12 @@ function Header() {
       <nav className="header__top">
         <h1>Building Love To Binge</h1>
       </nav>
-      <div className="header__options">
-        <button onClick={() => setFilter("shows")}>Shows</button>
-        <button onClick={() => setFilter("anime")}>Anime</button>
-      </div>
+      {showOptions && (
+        <div className="header__options">
+          <button onClick={() => setFilter("shows")}>Shows</button>
+          <button onClick={() => setFilter("anime")}>Anime</button>
+        </div>
+      )}
     </div>
   );
 }
