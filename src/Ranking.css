@@ -1,3 +1,17 @@
 .ranking {
   background-color: #f8f8f8;
 }
+
+.ranking__carousel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  height: 45vh;
+}
+
+.carousel__img {
+  width: 50vw;
+  height: 45vh;
+  object-fit: cover;
+  object-position: center;
+}
