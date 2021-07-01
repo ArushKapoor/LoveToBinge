@@ -1,0 +1,19 @@
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filters > button {
+  border-radius: 1em;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.filters__shows {
+  margin-right: 5vw;
+}
+
+.filters__anime {
+  margin-left: 5vw;
+}

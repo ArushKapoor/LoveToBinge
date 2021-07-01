@@ -3,6 +3,7 @@ import "./Ranking.css";
 import { useStateValue } from "./StateProvider";
 import { db } from "./firebase.js";
 import RankShow from "./RankShow";
+import Filters from "./Filters";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Ranking() {
@@ -31,7 +32,8 @@ function Ranking() {
   }, [filter]);
 
   return (
-    <div className="ranking">
+    <div className="ranking container">
+      <Filters />
       {shows.map((show, index) => (
         <RankShow rank={index + 1} name={show?.name} img={show?.url} />
       ))}

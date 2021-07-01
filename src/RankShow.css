@@ -1,21 +1,21 @@
 .rankShow {
   display: flex;
   vertical-align: middle;
+  border: 1px solid;
 }
 
 .rankShow__rank {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 3vw;
+  margin-right: 3vw;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .rankShow__img {
+  border-radius: 1em;
   background-color: red;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 200px;
-  height: 200px;
+  width: 20vw;
+  height: 25vh;
   object-fit: cover;
   object-position: center;
 }
