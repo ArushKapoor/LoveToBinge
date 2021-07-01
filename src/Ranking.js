@@ -32,11 +32,13 @@ function Ranking() {
   }, [filter]);
 
   return (
-    <div className="ranking container">
-      <Filters />
-      {shows.map((show, index) => (
-        <RankShow rank={index + 1} name={show?.name} img={show?.url} />
-      ))}
+    <div className="ranking">
+      <div className="ranking__container container">
+        <Filters />
+        {shows.map((show, index) => (
+          <RankShow rank={index + 1} name={show?.name} img={show?.url} />
+        ))}
+      </div>
     </div>
   );
 }

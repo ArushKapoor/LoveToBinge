@@ -4,7 +4,7 @@ import { useStateValue } from "./StateProvider";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Filters() {
-  const [{}, dispatch] = useStateValue();
+  const [{ filter }, dispatch] = useStateValue();
 
   const setFilter = (filter) => {
     dispatch({
@@ -13,15 +13,19 @@ function Filters() {
     });
   };
   return (
-    <div className="filters my-4">
+    <div className="filters pt-4" style={{ backgroundColor: "#F8F8F8" }}>
       <button
-        className="filters__shows btn btn-outline-dark"
+        className={`filters__shows ${
+          filter == "shows" ? "selected" : "not-selected"
+        }`}
         onClick={() => setFilter("shows")}
       >
         Shows
       </button>
       <button
-        className="filters__anime btn btn-outline-dark"
+        className={`filters__anime ${
+          filter == "anime" ? "selected" : "not-selected"
+        }`}
         onClick={() => setFilter("anime")}
       >
         Anime

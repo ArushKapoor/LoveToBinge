@@ -1,13 +1,30 @@
 .filters {
+  margin-bottom: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .filters > button {
-  border-radius: 1em;
+  border-radius: 0.7em;
   padding-left: 2vw;
   padding-right: 2vw;
+  padding-top: 0.6vh;
+  padding-bottom: 0.6vh;
+  font-weight: bold;
+  font-size: 4vh;
+}
+
+.selected {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+
+.not-selected {
+  background-color: white;
+  border: 1px solid red;
+  color: red;
 }
 
 .filters__shows {
