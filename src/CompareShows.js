@@ -173,7 +173,7 @@ function CompareShows() {
       <span onClick={() => showName(firstShow?.name)}>
         <Show img={firstShow?.url} name={firstShow?.name} />
       </span>
-      <h1>OR</h1>
+      <p className="compare__or">OR</p>
       <span onClick={() => showName(secondShow?.name)}>
         <Show img={secondShow?.url} name={secondShow?.name} />
       </span>

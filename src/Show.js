@@ -4,8 +4,8 @@ import "./Show.css";
 function Show({ img, name }) {
   return (
     <div className="show">
-      <img src={img} />
-      <h1>{name}</h1>
+      <img className="show__img" src={img} />
+      <p className="show__name">{name}</p>
     </div>
   );
 }

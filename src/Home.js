@@ -3,6 +3,8 @@ import "./Home.css";
 import CompareShows from "./CompareShows";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
+import Filters from "./Filters";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
   const [{ skipShow }, dispatch] = useStateValue();
@@ -16,16 +18,20 @@ function Home() {
 
   return (
     <div className="home">
-      <h3>Which show would you binge?</h3>
-      <h2>Choose Your Show</h2>
+      <p className="home__question">What would you binge?</p>
+      <div className="home__filters">
+        <Filters />
+      </div>
       <CompareShows />
       <div className="home__options">
-        <button onClick={skip}>Skip</button>
+        <button className="home__skip" onClick={skip}>
+          Skip
+        </button>
         <Link to="/ranking">
-          <button>Ranking</button>
+          <button className="home__ranking">Ranking</button>
         </Link>
         <Link to="/feedback">
-          <button>Feedback Form</button>
+          <button className="home__feedback">Feedback</button>
         </Link>
       </div>
     </div>

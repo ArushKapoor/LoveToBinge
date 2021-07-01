@@ -1,20 +1,62 @@
 .home {
+  background-color: #f8f8f8;
   max-width: 1500px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10vh;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
-.home > h3 {
-  font-size: 70px;
-  font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.home__question {
+  font-weight: bold;
+  font-size: 8vh;
 }
 
-.home > h2 {
-  font-size: 50px;
-  font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.home__filters {
+  margin-top: -2vh;
+}
+
+.home__options {
+  display: flex;
+}
+
+button {
+  background-color: white;
+  border: 1px solid red;
+  color: red;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-weight: bold;
+}
+
+.home__skip {
+  margin-right: 2vw;
+  border-radius: 1em;
+  font-size: 3vh;
+}
+
+.home__ranking {
+  margin-right: 2vw;
+  border-radius: 1em;
+  font-size: 3vh;
+}
+
+.home__feedback {
+  border-radius: 1em;
+  font-size: 3vh;
+}
+
+.home__skip:hover,
+.home__ranking:hover,
+.home__feedback:hover {
+  background-color: red;
+  color: white;
 }

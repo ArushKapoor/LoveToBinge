@@ -42,11 +42,11 @@ function App() {
       <Router>
         <Switch>
           <Route path="/ranking">
-            <Header showOptions={false} />
+            <Header />
             <Ranking />
           </Route>
           <Route path="/feedback">
-            <Header showOptions={false} />
+            <Header />
             <Feedback />
           </Route>
           <Route path="/">
