@@ -3,6 +3,7 @@ import "./Ranking.css";
 import { useStateValue } from "./StateProvider";
 import { db } from "./firebase.js";
 import RankShow from "./RankShow";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Ranking() {
   const [shows, setShows] = useState([]);
