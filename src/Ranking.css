@@ -15,3 +15,17 @@
   object-fit: cover;
   object-position: center;
 }
+
+@media (max-width: 480px) {
+  .ranking__carousel {
+    width: 100vw;
+    height: 40vh;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .carousel__img {
+    width: 100vw;
+    height: 40vh;
+  }
+}

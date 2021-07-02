@@ -35,7 +35,7 @@ textarea {
   border: none;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
-  padding-left: 1vw;
+  padding-left: 2vw;
   padding-right: 1vw;
   border-radius: 1em;
 }
@@ -76,10 +76,7 @@ textarea:focus {
   background-color: red;
   color: white;
   font-size: 3vh;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
+  padding: 2%;
   border-radius: 0.5em;
 }
 

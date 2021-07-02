@@ -10,6 +10,7 @@
 .home__question {
   font-weight: bold;
   font-size: 8vh;
+  margin-top: 1%;
 }
 
 .home__filters {
@@ -18,6 +19,7 @@
 
 .home__options {
   display: flex;
+  margin-top: 2%;
 }
 
 button {
@@ -53,4 +55,16 @@ button {
 .home__feedback:hover {
   background-color: red;
   color: white;
+}
+
+@media (max-width: 480px) {
+  .home__question {
+    font-weight: bold;
+    font-size: 5vh;
+}
+
+.home__options {
+  display: flex;
+  margin-top: 5%;
+}
 }

@@ -8,8 +8,8 @@
 }
 
 .show__img {
-  width: 35vw;
-  height: 40vh;
+  width: 34vw;
+  height: 38vh;
   object-fit: cover;
   object-position: center;
 }
@@ -17,5 +17,18 @@
 .show__name {
   font-weight: bold;
   align-self: center;
-  font-size: 6vh;
+  font-size: 5vh;
+}
+
+@media (max-width: 480px) {
+  .show__name {
+    font-size: 3vh;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+  .show__img {
+    width: 70vw;
+    height: 25vh;
+    border-radius: 2%;
+  }
 }

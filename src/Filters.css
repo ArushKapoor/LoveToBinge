@@ -1,8 +1,9 @@
 .filters {
-  margin-bottom: 3vh;
+  margin-bottom: 2.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 4%;
 }
 
 .filters > button {
@@ -13,6 +14,7 @@
   padding-bottom: 0.6vh;
   font-weight: bold;
   font-size: 4vh;
+  justify-content: space-between;
 }
 
 .selected {
@@ -34,3 +36,14 @@
 .filters__anime {
   margin-left: 5vw;
 }
+
+@media (max-width: 480px) {
+  .filters > button {
+    font-size: 2.5vh;
+  }
+  .filters {
+    margin-bottom: 0.3vh;
+    padding-top: 3%;
+  }
+}
+

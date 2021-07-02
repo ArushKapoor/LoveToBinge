@@ -13,7 +13,7 @@ function Filters() {
     });
   };
   return (
-    <div className="filters pt-4" style={{ backgroundColor: "#F8F8F8" }}>
+    <div className="filters" style={{ backgroundColor: "#F8F8F8" }}>
       <button
         className={`filters__shows ${
           filter == "shows" ? "selected" : "not-selected"
