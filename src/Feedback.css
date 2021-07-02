@@ -28,8 +28,8 @@
   margin-bottom: 2.5vh;
 }
 
-input,
-textarea {
+.feedback__name > input,
+.feedback__feedback > textarea {
   background-color: #eeeeee;
   width: 100%;
   border: none;
@@ -40,8 +40,8 @@ textarea {
   border-radius: 1em;
 }
 
-input:focus,
-textarea:focus {
+.feedback__name > input:focus,
+.feedback__feedback > textarea:focus {
   outline: none;
 }
 
