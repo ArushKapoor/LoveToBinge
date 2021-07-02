@@ -82,3 +82,29 @@ textarea:focus {
   padding-bottom: 0.5vh;
   border-radius: 0.5em;
 }
+
+/* @media (min-width: 769px) {
+  .feedback {
+    background-color: blue;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    background-color: orange;
+  }
+} */
+
+@media (max-width: 480px) {
+  .feedback {
+    padding-top: 36vw;
+  }
+
+  .feedback__container {
+    width: 75vw;
+  }
+
+  .feedback__question {
+    font-size: 5vw;
+  }
+}
