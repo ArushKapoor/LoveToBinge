@@ -60,11 +60,11 @@ button {
 @media (max-width: 480px) {
   .home__question {
     font-weight: bold;
-    font-size: 5vh;
-}
+    font-size: 7vw;
+  }
 
-.home__options {
-  display: flex;
-  margin-top: 5%;
-}
+  .home__options {
+    display: flex;
+    margin-top: 5%;
+  }
 }
