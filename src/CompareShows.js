@@ -3,8 +3,15 @@ import Show from "./Show";
 import "./CompareShows.css";
 import { useStateValue } from "./StateProvider";
 import { db } from "./firebase.js";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function CompareShows() {
+
+  useEffect(()=> {
+    Aos.init({delay: 1000});
+  },[]);
+
   // Calling in the data layer/ global variable
   const [{ posts, skipShow, filter }] = useStateValue();
 
@@ -170,11 +177,11 @@ function CompareShows() {
 
   return (
     <div className="compare">
-      <span onClick={() => showName(firstShow?.name)}>
+      <span data-aos="fade-right" onClick={() => showName(firstShow?.name)}>
         <Show img={firstShow?.url} name={firstShow?.name} />
       </span>
       <p className="compare__or">OR</p>
-      <span onClick={() => showName(secondShow?.name)}>
+      <span data-aos="fade-left" onClick={() => showName(secondShow?.name)}>
         <Show img={secondShow?.url} name={secondShow?.name} />
       </span>
     </div>
