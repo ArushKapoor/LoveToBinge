@@ -16,9 +16,22 @@
   object-position: center;
 }
 
+
+@media (max-width: 768px) {
+  .ranking__carousel {
+    width: 80vw;
+    height: 45vh;
+  }
+
+  .carousel__img {
+    width: 80vw;
+    height: 45vh;
+  }
+}
+
+
 @media (max-width: 480px) {
   .ranking__carousel {
-    margin-left: -3.5vw;
     width: 100vw;
     height: 40vh;
   }

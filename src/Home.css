@@ -57,14 +57,32 @@ button {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .home__question {
+    font-size: 6vw;
+}
+
+.home__options {
+  margin-top: 5%;
+}
+}
+
 @media (max-width: 480px) {
   .home__question {
     font-weight: bold;
-    font-size: 5vh;
+    font-size: 7vw;
 }
 
 .home__options {
   display: flex;
   margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home__skip,
+.home__ranking,
+.home__feedback {
+  font-size : 3vw;
 }
 }

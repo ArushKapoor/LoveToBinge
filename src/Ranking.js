@@ -60,7 +60,6 @@ function Ranking() {
 
   return (
     <div className="ranking">
-      <div className="ranking__container container">
         {/* Only show the carousel when shows array is not empty */}
         {shows.length != 0 && (
           // Carousel attributes-
@@ -100,7 +99,6 @@ function Ranking() {
           <RankShow rank={index + 1} name={show?.name} img={show?.url} />
         ))}
       </div>
-    </div>
   );
 }
 

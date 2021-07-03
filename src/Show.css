@@ -17,12 +17,26 @@
 .show__name {
   font-weight: bold;
   align-self: center;
-  font-size: 5vh;
+  font-size: 4.8vh;
+}
+
+@media (max-width: 768px) {
+  .show__name {
+    font-size: 4.2vw;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    text-align: center;
+  }
+  .show__img {
+    width: 42vw;
+    height: 48vh;
+    border-radius: 2%;
+  }
 }
 
 @media (max-width: 480px) {
   .show__name {
-    font-size: 3vh;
+    font-size: 5.5vw;
     margin-bottom: 1%;
     margin-top: 1%;
   }

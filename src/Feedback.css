@@ -72,6 +72,7 @@
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2%;
   border: 1px solid red;
   background-color: red;
   color: white;
@@ -80,17 +81,15 @@
   border-radius: 0.5em;
 }
 
-/* @media (min-width: 769px) {
-  .feedback {
-    background-color: blue;
+ @media (max-width: 768px) {
+  .feedback__container {
+    width: 70vw;
+  }
+
+  .feedback__question {
+    font-size: 4.2vw;
   }
 }
-
-@media (max-width: 768px) {
-  .feedback {
-    background-color: orange;
-  }
-} */
 
 @media (max-width: 480px) {
   .feedback {
@@ -104,4 +103,8 @@
   .feedback__question {
     font-size: 5vw;
   }
+  
+.feedback__submit > button {
+  font-size: 4.5vw;
+}
 }

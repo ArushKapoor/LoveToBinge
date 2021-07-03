@@ -1,17 +1,19 @@
 .rankShow {
   display: flex;
-  vertical-align: middle;
   background-color: white;
   border-radius: 2em;
   padding: 1%;
   margin-bottom: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
   /* border: 1px solid; */
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .rankShow__rank {
-  margin-left: 4vw;
-  margin-right: 4vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
   margin-top: auto;
   margin-bottom: auto;
   font-size: 6vh;
@@ -19,43 +21,53 @@
 
 .rankShow__img {
   border-radius: 1em;
-  width: 16vw;
-  height: 20vh;
+  width: 20vw;
+  height: 22vh;
   object-fit: cover;
   object-position: center;
 }
 
 .rankShow__name {
-  margin-left: 5vw;
+  margin-left: 6vw;
   margin-top: auto;
   margin-bottom: auto;
   font-size: 6vh;
 }
 
+@media (max-width: 768px) {
+  .rankShow {
+    width: 90vw;
+  }
+  .rankShow__img {
+    width: 38vw;
+    height: 22vh;
+  }
+  .rankShow__name {
+    font-size: 6vw;
+  }
+}
+
 
 @media (max-width: 480px) {
-  .rankShow__rank {
-    font-size: 5vh;
-  }
-
-  .rankShow__img {
-    border-radius: 1em;
-    width: 40vw;
-    height: 20vh;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .rankShow__name {
-    margin-left: 6vw;
-    font-size: 5vh;
-  }
-
   .rankShow {
+    width: 94vw;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
     margin-top: 2vh;
-    /* border: 1px solid; */
+  }
+
+  .rankShow__rank {
+    font-size: 6vw;
+    margin-right: 2vh;
+  }
+
+  .rankShow__img {
+    width: 42vw;
+    height: 20vh;
+  }
+
+  .rankShow__name {
+    font-size: 7.5vw;
   }
 }
 
