@@ -11,7 +11,16 @@
   font-size: 5vh;
 }
 
-span {
+/* Dont use span directly otherwise it will affect other span tags in other js files as well */
+/* Wrong -> span {
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+} */
+.compare__show {
   background-color: white;
   display: block;
   margin-left: auto;
@@ -24,7 +33,7 @@ span {
   .compare {
     flex-direction: column;
   }
-  span {
+  .compare__show {
     width: 70vw;
     background-color: white;
     display: block;

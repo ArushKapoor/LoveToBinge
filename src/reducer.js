@@ -14,18 +14,23 @@ const reducer = (state, action) => {
   // this is a switch case to decide what changes to make in the data
   // layer when we fire off a dispatch
   switch (action.type) {
+    // To store name of all the shows in posts
     case "CREATE_POSTS":
       return {
         ...state,
         posts: action.item?.posts,
       };
 
+    // To change the value of skipShow to trigger UseEffect
+    // when skip button is clicked
     case "CHANGE_SHOW":
       return {
         ...state,
         skipShow: action.skipShow,
       };
 
+    // To change the value of the filter either "shows" or
+    // "anime" to get the particular collection
     case "CHANGE_FILTER":
       console.log("Filter ", action.filter);
       return {

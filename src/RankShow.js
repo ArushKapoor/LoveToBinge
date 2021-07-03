@@ -10,7 +10,8 @@ function RankShow({ rank, name, img }) {
   },[]);
 
   return (
-    <div data-aos="flip-left" className="rankShow ml-2">
+    // Creating the layout of the cards on Ranking page
+    <div data-aos="flip-left" className="rankShow">
       <p className="rankShow__rank font-weight-bold my-auto">{rank}</p>
       <img className="rankShow__img" src={img} />
       <h1 className="rankShow__name font-weight-bold">{name}</h1>
@@ -18,4 +19,5 @@ function RankShow({ rank, name, img }) {
   );
 }
 
+// Anything that we have to use outside of this file, we export it
 export default RankShow;
