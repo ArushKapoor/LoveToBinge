@@ -9,6 +9,7 @@
   align-self: center;
   font-weight: bold;
   font-size: 5vh;
+  margin-bottom: -0.6vh;
 }
 
 /* Dont use span directly otherwise it will affect other span tags in other js files as well */
@@ -41,5 +42,8 @@
     margin-right: auto;
     border-radius: 2%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  .compare__or {
+    margin-bottom: -0.4vh;
   }
 }

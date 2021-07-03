@@ -18,6 +18,7 @@
 
 @media (max-width: 480px) {
   .ranking__carousel {
+    margin-left: -3.5vw;
     width: 100vw;
     height: 40vh;
   }
