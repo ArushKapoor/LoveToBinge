@@ -185,7 +185,7 @@ function CompareShows() {
       </span>
     </div>
   );
-}
+    }
 
 // Anything that we have to use outside of this file, we export it
 export default CompareShows;

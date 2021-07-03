@@ -21,6 +21,7 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 } */
 .compare__show {
+  width: 37vw;
   background-color: white;
   display: block;
   margin-left: auto;
@@ -32,12 +33,6 @@
 @media (max-width: 768px) {
   .compare__show {
     width: 42vw;
-    background-color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 2%;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   }
 
 .compare__or {
@@ -54,12 +49,6 @@
   }
   .compare__show {
     width: 70vw;
-    background-color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 2%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   }
   .compare__or {
     margin-bottom: -0.4vh;
