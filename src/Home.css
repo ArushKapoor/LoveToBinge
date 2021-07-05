@@ -9,7 +9,7 @@
 
 .home__question {
   font-weight: bold;
-  font-size: 8vh;
+  font-size: 4vw;
   margin-top: 1%;
 }
 
@@ -24,8 +24,8 @@
 
 button {
   background-color: white;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #d34172;
+  color: #d34172;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-top: 1vh;
@@ -53,7 +53,7 @@ button {
 .home__skip:hover,
 .home__ranking:hover,
 .home__feedback:hover {
-  background-color: red;
+  background-color: #d34172;
   color: white;
 }
 

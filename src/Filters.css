@@ -12,22 +12,22 @@
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 0.6vh;
-  padding-bottom: 0.6vh;
+  padding-bottom: 1vh;
   font-weight: bold;
   font-size: 4vh;
   justify-content: space-between;
 }
 
 .selected {
-  background-color: red;
-  border: 1px solid red;
+  background-color: #d34172;
+  border: 1px solid #d34172;
   color: white;
 }
 
 .not-selected {
   background-color: white;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #d34172;
+  color: #d34172;
 }
 
 .filters__shows {
