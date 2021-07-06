@@ -6,6 +6,10 @@
   padding-bottom: 1vh;
 }
 
+.header__link:hover {
+  text-decoration: none;
+}
+
 .header__name {
   color: white;
   font-weight: bold;
