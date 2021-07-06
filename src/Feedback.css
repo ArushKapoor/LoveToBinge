@@ -60,7 +60,7 @@
   /* background-color: teal; */
   margin-top: -1vh;
   margin-right: -1.5vh;
-  color: #d34172;
+  color: #e91e63;
   font-size: 3vh;
 }
 
@@ -73,15 +73,15 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2%;
-  border: 1px solid #d34172;
-  background-color: #d34172;
+  border: 1px solid #e91e63;
+  background-color: #e91e63;
   color: white;
   font-size: 3vh;
   padding: 2%;
   border-radius: 0.5em;
 }
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   .feedback__container {
     width: 70vw;
   }
@@ -103,8 +103,8 @@
   .feedback__question {
     font-size: 5vw;
   }
-  
-.feedback__submit > button {
-  font-size: 4.5vw;
-}
+
+  .feedback__submit > button {
+    font-size: 4.5vw;
+  }
 }

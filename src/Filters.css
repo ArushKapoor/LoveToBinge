@@ -19,15 +19,15 @@
 }
 
 .selected {
-  background-color: #d34172;
-  border: 1px solid #d34172;
+  background-color: #e91e63;
+  border: 1px solid #e91e63;
   color: white;
 }
 
 .not-selected {
   background-color: white;
-  border: 1px solid #d34172;
-  color: #d34172;
+  border: 1px solid #e91e63;
+  color: #e91e63;
 }
 
 .filters__shows {
@@ -46,4 +46,3 @@
     margin-bottom: 0.3vh;
   }
 }
-

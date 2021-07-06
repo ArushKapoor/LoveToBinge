@@ -24,8 +24,8 @@
 
 button {
   background-color: white;
-  border: 1px solid #d34172;
-  color: #d34172;
+  border: 1px solid #e91e63;
+  color: #e91e63;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-top: 1vh;
@@ -53,36 +53,36 @@ button {
 .home__skip:hover,
 .home__ranking:hover,
 .home__feedback:hover {
-  background-color: #d34172;
+  background-color: #e91e63;
   color: white;
 }
 
 @media (max-width: 768px) {
   .home__question {
     font-size: 6vw;
-}
+  }
 
-.home__options {
-  margin-top: 5%;
-}
+  .home__options {
+    margin-top: 5%;
+  }
 }
 
 @media (max-width: 480px) {
   .home__question {
     font-weight: bold;
     font-size: 7vw;
-}
+  }
 
-.home__options {
-  display: flex;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .home__options {
+    display: flex;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.home__skip,
-.home__ranking,
-.home__feedback {
-  font-size : 3vw;
-}
+  .home__skip,
+  .home__ranking,
+  .home__feedback {
+    font-size: 3vw;
+  }
 }
