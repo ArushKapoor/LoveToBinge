@@ -35,12 +35,11 @@
     width: 42vw;
   }
 
-.compare__or {
-  align-self: center;
-  font-weight: bold;
-  font-size: 4vh;
-}
-
+  .compare__or {
+    align-self: center;
+    font-weight: bold;
+    font-size: 4vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -51,6 +50,8 @@
     width: 70vw;
   }
   .compare__or {
-    margin-bottom: -0.4vh;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    /* margin-bottom: -0.4vh; */
   }
 }
