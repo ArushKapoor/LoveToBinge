@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 1vh;
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .filters > button {
@@ -40,9 +40,10 @@
 
 @media (max-width: 480px) {
   .filters > button {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
   .filters {
+    margin-top: 0vh;
     margin-bottom: 0.3vh;
   }
 }

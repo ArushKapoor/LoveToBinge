@@ -16,12 +16,12 @@
   margin-right: 3vw;
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 6vh;
+  font-size: 2.5vw;
 }
 
 .rankShow__img {
   border-radius: 1em;
-  width: 20vw;
+  width: 18vw;
   height: 22vh;
   object-fit: cover;
   object-position: center;
@@ -31,7 +31,7 @@
   margin-left: 6vw;
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 6vh;
+  font-size: 2.5vw;
 }
 
 @media (max-width: 768px) {
@@ -39,11 +39,14 @@
     width: 90vw;
   }
   .rankShow__img {
-    width: 38vw;
+    width: 24vw;
     height: 22vh;
   }
   .rankShow__name {
-    font-size: 6vw;
+    font-size: 3vw;
+  }
+  .rankShow__rank {
+    font-size: 3vw;
   }
 }
 
@@ -51,23 +54,23 @@
 @media (max-width: 480px) {
   .rankShow {
     width: 94vw;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     margin-top: 2vh;
   }
 
   .rankShow__rank {
-    font-size: 6vw;
+    font-size: 3.5vw;
     margin-right: 2vh;
   }
 
   .rankShow__img {
-    width: 42vw;
-    height: 20vh;
+    width: 30vw;
+    height: 18vh;
   }
 
   .rankShow__name {
-    font-size: 7.5vw;
+    font-size: 3.5vw;
   }
 }
 

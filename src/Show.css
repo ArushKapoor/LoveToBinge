@@ -18,12 +18,16 @@
   text-align: center;
   font-weight: bold;
   align-self: center;
-  font-size: 4.8vh;
+  font-size: 2vw;
+}
+
+.show__name_div{
+  background-color: brown;
 }
 
 @media (max-width: 768px) {
   .show__name {
-    font-size: 4.2vw;
+    font-size: 3.5vw;
     margin-bottom: 1.5%;
     margin-top: 1.5%;
     text-align: center;
@@ -37,7 +41,7 @@
 
 @media (max-width: 480px) {
   .show__name {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
     margin-bottom: 1%;
     margin-top: 1%;
   }

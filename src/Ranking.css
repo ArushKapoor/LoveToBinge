@@ -11,7 +11,7 @@
 
 .carousel__img {
   width: 55vw;
-  height: 53vh;
+  height: 50vh;
   object-fit: cover;
   object-position: center;
 }
@@ -33,11 +33,11 @@
 @media (max-width: 480px) {
   .ranking__carousel {
     width: 100vw;
-    height: 40vh;
+    height: 38vh;
   }
 
   .carousel__img {
     width: 100vw;
-    height: 40vh;
+    height: 38vh;
   }
 }
