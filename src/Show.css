@@ -15,6 +15,7 @@
 }
 
 .show__name {
+  text-align: center;
   font-weight: bold;
   align-self: center;
   font-size: 4.8vh;
