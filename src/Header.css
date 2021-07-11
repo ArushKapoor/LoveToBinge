@@ -6,6 +6,11 @@
   padding-bottom: 1vh;
 }
 
+.header__title {
+  width: 25vw;
+  object-fit: contain;
+}
+
 .header__link:hover {
   text-decoration: none;
 }
