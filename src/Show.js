@@ -6,7 +6,9 @@ function Show({ img, name }) {
     // Creating the layout of how each show should look
     <div className="show">
       <img className="show__img" src={img} />
-      <div className="show__name_div"><p className="show__name">{name}</p></div>
+      <div className="show__name__div">
+        <p className="show__name">{name}</p>
+      </div>
     </div>
   );
 }

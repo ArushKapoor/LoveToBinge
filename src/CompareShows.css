@@ -23,7 +23,7 @@
 .compare__show {
   width: 37vw;
   background-color: white;
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   border-radius: 2%;

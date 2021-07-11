@@ -15,14 +15,19 @@
 }
 
 .show__name {
+  display: table-cell;
   text-align: center;
   font-weight: bold;
-  align-self: center;
+  vertical-align: middle;
   font-size: 2vw;
+  /* background-color: red; */
 }
 
-.show__name_div{
-  background-color: brown;
+.show__name__div {
+  display: table;
+  overflow: hidden;
+  height: 100%;
+  /* background-color: red; */
 }
 
 @media (max-width: 768px) {
