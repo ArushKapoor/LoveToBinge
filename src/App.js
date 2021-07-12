@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
@@ -7,6 +7,7 @@ import { useStateValue } from "./StateProvider";
 import { db } from "./firebase.js";
 import Ranking from "./Ranking";
 import Feedback from "./Feedback";
+import Loading from "./Loading";
 
 // Everthing in React is put in a components to make it easy to reuse
 // the code.
@@ -17,16 +18,17 @@ function App() {
   // filter contains either "anime" or "shows"
   const [{ filter }, dispatch] = useStateValue();
 
+  const [loading, setLoading] = useState(false);
+
   // useEffect <<<<<<<< POWERFUL
   // Piece of code which runs based on a given condition...
   useEffect(() => {
-    console.log("App.js has called Use Effect");
+    setLoading(true);
     // fetching all the data inside collection(filter) from firebase
     db.collection(filter)
       .get()
       .then((querySnapshot) => {
         var entries = [];
-        // console.log("App.js Started Fetching data from firebase");
         querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
 
@@ -34,7 +36,6 @@ function App() {
           entries.push(doc.data().name);
         });
         // console.log("These are entries", entries);
-        console.log("App.js Shows data is ready to be dispatched");
 
         // dispatch is the action that we call to fire off items in or out
         // of the data layer.
@@ -44,6 +45,7 @@ function App() {
             posts: entries,
           },
         });
+        setLoading(false);
       })
       .catch((error) => {
         console.log("Error getting documents: ", error);
@@ -60,6 +62,10 @@ function App() {
         {/* Switch component is similar to swtich case used in react 
           but here it uses Route instead of case */}
         <Switch>
+          <Route path="/loading">
+            <Header />
+            <Loading />
+          </Route>
           {/* Route component is where we define the url path */}
           <Route path="/ranking">
             {/* These components load the ranking page */}

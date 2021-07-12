@@ -1,0 +1,32 @@
+.loading {
+  /* background-color: teal; */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  right: 45%;
+}
+
+.loading__img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 5vw;
+  width: 5vw;
+  animation: rotation 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.loading__name {
+  font-weight: bold;
+  font-size: 3vw;
+}
