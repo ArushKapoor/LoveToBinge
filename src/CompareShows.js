@@ -7,10 +7,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 function CompareShows() {
-
-  useEffect(()=> {
-    Aos.init({delay: 1000});
-  },[]);
+  useEffect(() => {
+    Aos.init({ delay: 1000 });
+  }, []);
 
   // Calling in the data layer/ global variable
 
@@ -171,13 +170,18 @@ function CompareShows() {
     <div className="compare">
       {/* Dont use span directly in css styles because it will affect other span
       tags in other js files as well */}
-      <span data-aos="fade-right" className="compare__show" onClick={() => showName(firstShow?.name)}>
+      <span
+        data-aos="fade-right"
+        className="compare__show"
+        onClick={() => showName(firstShow?.name)}
+      >
         <Show img={firstShow?.url} name={firstShow?.name} />
       </span>
       <p className="compare__or">OR</p>
       {/* () => showName("") used to send argument for the show that was
       chosen by the user to showName method */}
-      <span data-aos="fade-left"
+      <span
+        data-aos="fade-left"
         className="compare__show"
         onClick={() => showName(secondShow?.name)}
       >
@@ -185,7 +189,7 @@ function CompareShows() {
       </span>
     </div>
   );
-    }
+}
 
 // Anything that we have to use outside of this file, we export it
 export default CompareShows;

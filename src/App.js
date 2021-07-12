@@ -20,18 +20,21 @@ function App() {
   // useEffect <<<<<<<< POWERFUL
   // Piece of code which runs based on a given condition...
   useEffect(() => {
+    console.log("App.js has called Use Effect");
     // fetching all the data inside collection(filter) from firebase
     db.collection(filter)
       .get()
       .then((querySnapshot) => {
         var entries = [];
+        // console.log("App.js Started Fetching data from firebase");
         querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
 
           // pushing the show name into the entries array.
           entries.push(doc.data().name);
         });
-        console.log("These are entries", entries);
+        // console.log("These are entries", entries);
+        console.log("App.js Shows data is ready to be dispatched");
 
         // dispatch is the action that we call to fire off items in or out
         // of the data layer.
