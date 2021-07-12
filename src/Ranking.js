@@ -6,6 +6,7 @@ import RankShow from "./RankShow";
 import Filters from "./Filters";
 import { Carousel } from "react-bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Aos from "aos";
 
 function Ranking() {
   // Creating a variable array to store all the shows from collection
@@ -21,6 +22,7 @@ function Ranking() {
   // useEffect <<<<<<<< POWERFUL
   // Piece of code which runs based on a given condition...
   useEffect(() => {
+    Aos.init({ delay: 500 });
     // console.log("Ranking.js has been called");
     // fetching all the show data from firebase
     db.collection(filter)
@@ -103,7 +105,9 @@ function Ranking() {
 
       {/* Traversing through all the shows and passing the arguments to RankShow */}
       {shows.map((show, index) => (
-        <RankShow rank={index + 1} name={show?.name} img={show?.url} />
+        <div data-aos="flip-left">
+          <RankShow rank={index + 1} name={show?.name} img={show?.url} />
+        </div>
       ))}
     </div>
   );
