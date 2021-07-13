@@ -9,7 +9,9 @@ function Header() {
     <nav className="header">
       <Link className="header__link" to="/">
         {/* <p className="header__name">Love To Binge</p> */}
-        <img className="header__title" src={title} alt="Title" />
+        <div>
+          <img className="header__title" src={title} alt="Title" />
+        </div>
       </Link>
     </nav>
   );

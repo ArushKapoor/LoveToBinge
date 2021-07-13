@@ -4,10 +4,27 @@
   flex-direction: column;
   position: absolute;
   top: 45%;
-  right: 45%;
+  right: 42%;
 }
 
-.loading__img {
+.loading__imgCircle {
+  margin-top: 2.4vw;
+  height: 3vw;
+  /* background-color: teal; */
+  animation: rotation 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loading__imgSymbol {
+  height: 0.8vw;
+  position: absolute;
+  right: 12.94vw;
+  top: 3.55vw;
+  /* background-color: teal; */
+}
+
+/* .loading__img {
   margin-left: auto;
   margin-right: auto;
   height: 5vw;
@@ -15,7 +32,7 @@
   animation: rotation 1.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
+} */
 
 @keyframes rotation {
   from {
@@ -27,6 +44,12 @@
 }
 
 .loading__name {
+  font-family: Centaur;
   font-weight: bold;
-  font-size: 3vw;
+  font-size: 5vw;
+  color: #e91e63;
+}
+
+.loading__nameContainer {
+  display: flex;
 }
