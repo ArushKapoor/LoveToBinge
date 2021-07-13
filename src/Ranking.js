@@ -51,7 +51,7 @@ function Ranking() {
 
         // creating a temporary variable to copy top 2 shows data
         var temp = [];
-        for (var i = 0; i < 2; i++) {
+        for (var i = 0; i < 5; i++) {
           temp.push(entries[i]);
         }
         // console.log("Ranking.js has completed the job");

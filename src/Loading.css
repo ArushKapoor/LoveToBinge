@@ -1,5 +1,4 @@
 .loading {
-  /* background-color: teal; */
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -8,6 +7,7 @@
 }
 
 .loading__imgCircle {
+  z-index: -1;
   margin-top: 2.4vw;
   height: 3vw;
   /* background-color: teal; */
@@ -17,6 +17,7 @@
 }
 
 .loading__imgSymbol {
+  background-color: #e91e63;
   height: 0.8vw;
   position: absolute;
   right: 12.94vw;
@@ -44,6 +45,7 @@
 }
 
 .loading__name {
+  z-index: 1;
   font-family: Centaur;
   font-weight: bold;
   font-size: 5vw;

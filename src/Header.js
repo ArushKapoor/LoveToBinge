@@ -8,7 +8,6 @@ function Header() {
     // Creating the navbar or the header of website
     <nav className="header">
       <Link className="header__link" to="/">
-        {/* <p className="header__name">Love To Binge</p> */}
         <div>
           <img className="header__title" src={title} alt="Title" />
         </div>

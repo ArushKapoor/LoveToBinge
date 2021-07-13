@@ -17,7 +17,7 @@ function Filters() {
     });
   };
   return (
-    <div className="filters" style={{ backgroundColor: "#F8F8F8" }}>
+    <div className="filters">
       {/* Adding conditional css classes selected and not-selected */}
       <button
         className={`filters__shows ${
