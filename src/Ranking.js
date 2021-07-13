@@ -7,6 +7,7 @@ import Filters from "./Filters";
 import { Carousel } from "react-bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Aos from "aos";
+import Loading from "./Loading";
 
 function Ranking() {
   // Creating a variable array to store all the shows from collection
@@ -69,6 +70,7 @@ function Ranking() {
 
   return (
     <div className="ranking">
+      {shows.length == 0 && <Loading />}
       {/* Only show the carousel when shows array is not empty */}
       {shows.length != 0 && (
         // Carousel attributes-
@@ -101,14 +103,15 @@ function Ranking() {
           ))}
         </Carousel>
       )}
-      <Filters />
+      {shows.length != 0 && <Filters />}
 
       {/* Traversing through all the shows and passing the arguments to RankShow */}
-      {shows.map((show, index) => (
-        <div data-aos="flip-left">
-          <RankShow rank={index + 1} name={show?.name} img={show?.url} />
-        </div>
-      ))}
+      {shows.length != 0 &&
+        shows.map((show, index) => (
+          <div data-aos="flip-left">
+            <RankShow rank={index + 1} name={show?.name} img={show?.url} />
+          </div>
+        ))}
     </div>
   );
 }

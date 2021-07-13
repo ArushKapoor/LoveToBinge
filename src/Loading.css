@@ -49,7 +49,8 @@
   font-family: Centaur;
   font-weight: bold;
   font-size: 5vw;
-  color: #e91e63;
+  /* color: #e91e63; */
+  color: black;
 }
 
 .loading__nameContainer {

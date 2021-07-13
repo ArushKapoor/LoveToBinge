@@ -80,7 +80,7 @@ function App() {
           {/* This is the default route */}
           <Route path="/">
             <Header />
-            <Home />
+            {loading ? <Loading /> : <Home />}
           </Route>
         </Switch>
       </Router>
