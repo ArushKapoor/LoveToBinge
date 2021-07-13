@@ -16,14 +16,20 @@ import Loading from "./Loading";
 function App() {
   // Calling in the data layer/ global variable
   // filter contains either "anime" or "shows"
-  const [{ filter }, dispatch] = useStateValue();
+  const [{ filter, loading }, dispatch] = useStateValue();
 
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   // useEffect <<<<<<<< POWERFUL
   // Piece of code which runs based on a given condition...
   useEffect(() => {
-    setLoading(true);
+    console.log("Loading ", loading);
+    dispatch({
+      type: "SET_LOADING",
+      loading: true,
+    });
+    // console.log("New Loading ", loading);
+    // setLoading(true);
     // fetching all the data inside collection(filter) from firebase
     db.collection(filter)
       .get()
@@ -45,7 +51,11 @@ function App() {
             posts: entries,
           },
         });
-        setLoading(false);
+        dispatch({
+          type: "SET_LOADING",
+          loading: false,
+        });
+        // setLoading(false);
       })
       .catch((error) => {
         console.log("Error getting documents: ", error);

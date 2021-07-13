@@ -18,7 +18,7 @@ function Ranking() {
 
   // Calling in the data layer/ global variable
   // filter contains either "anime" or "shows"
-  const [{ filter }] = useStateValue();
+  const [{ filter, loading }] = useStateValue();
 
   // useEffect <<<<<<<< POWERFUL
   // Piece of code which runs based on a given condition...
@@ -70,48 +70,47 @@ function Ranking() {
 
   return (
     <div className="ranking">
-      {shows.length == 0 && <Loading />}
+      {(shows.length == 0 || loading) && <Loading />}
       {/* Only show the carousel when shows array is not empty */}
-      {shows.length != 0 && (
+      {shows.length != 0 && !loading && (
         // Carousel attributes-
         // label - to show text on the right or left side
         // icon - to show the right arrow aur left arrow
         // interval - time interval between each image
         // slide - to give sliding animation on image change
         // wrap - to wrap the image? (no idea, copied from Vivek)
-        <Carousel
-          className="ranking__carousel"
-          nextLabel={""}
-          prevLabel={""}
-          interval={4000}
-          prevIcon={""}
-          nextIcon={""}
-          slide={true}
-          wrap={true}
-        >
-          {/* Traversing through each show in topShows and displaying it 
+        <div>
+          <Carousel
+            className="ranking__carousel"
+            nextLabel={""}
+            prevLabel={""}
+            interval={4000}
+            prevIcon={""}
+            nextIcon={""}
+            slide={true}
+            wrap={true}
+          >
+            {/* Traversing through each show in topShows and displaying it 
             in Carousel Item */}
-          {topShows?.map((show, index) => (
-            <Carousel.Item>
-              <img
-                className="carousel__img"
-                src={show?.url}
-                alt={show?.name}
-                key={index}
-              />
-            </Carousel.Item>
+            {topShows?.map((show, index) => (
+              <Carousel.Item>
+                <img
+                  className="carousel__img"
+                  src={show?.url}
+                  alt={show?.name}
+                  key={index}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+          <Filters />
+          {shows.map((show, index) => (
+            <div data-aos="flip-left">
+              <RankShow rank={index + 1} name={show?.name} img={show?.url} />
+            </div>
           ))}
-        </Carousel>
+        </div>
       )}
-      {shows.length != 0 && <Filters />}
-
-      {/* Traversing through all the shows and passing the arguments to RankShow */}
-      {shows.length != 0 &&
-        shows.map((show, index) => (
-          <div data-aos="flip-left">
-            <RankShow rank={index + 1} name={show?.name} img={show?.url} />
-          </div>
-        ))}
     </div>
   );
 }

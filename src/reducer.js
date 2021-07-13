@@ -3,6 +3,7 @@ export const initialState = {
   posts: [],
   skipShow: false,
   filter: "shows",
+  loading: false,
 };
 
 // This is where we create the reducer which has state and actions which
@@ -36,6 +37,13 @@ const reducer = (state, action) => {
       return {
         ...state,
         filter: action.filter,
+      };
+
+    case "SET_LOADING":
+      console.log("Inside Reducer ", action.loading);
+      return {
+        ...state,
+        loading: action.loading,
       };
 
     default:
