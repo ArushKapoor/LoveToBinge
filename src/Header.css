@@ -15,3 +15,15 @@
 .header__link:hover {
   text-decoration: none;
 }
+
+@media (max-width: 720px) {
+  .header__title {
+    width: 43vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__title {
+    width: 45vw;
+  }
+}

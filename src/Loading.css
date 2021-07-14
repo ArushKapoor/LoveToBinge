@@ -56,3 +56,45 @@
 .loading__nameContainer {
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .loading {
+    right: 32%;
+  }
+
+  .loading__name {
+    font-size: 10vw;
+  }
+
+  .loading__imgCircle {
+    margin-top: 5.45vw;
+    height: 5.5vw;
+  }
+
+  .loading__imgSymbol {
+    right: 25.9vw;
+    top: 7.51vw;
+    height: 1.3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading {
+    right: 30%;
+  }
+
+  .loading__name {
+    font-size: 11vw;
+  }
+
+  .loading__imgCircle {
+    margin-top: 6.6vw;
+    height: 5.5vw;
+  }
+
+  .loading__imgSymbol {
+    right: 28vw;
+    top: 8.6vw;
+    height: 1.4vw;
+  }
+}
