@@ -15,21 +15,12 @@
 }
 
 .show__name {
+  margin-bottom: 0vw;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
-  display: table-cell;
-  text-align: center;
   font-weight: bold;
-  vertical-align: middle;
   font-size: 2vw;
-  /* background-color: red; */
-}
-
-.show__name__div {
-  display: table;
-  overflow: hidden;
-  height: 100%;
-  /* background-color: red; */
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -54,7 +45,7 @@
   }
   .show__img {
     width: 70vw;
-    height: 25vh;
+    height: 50vw;
     border-radius: 2%;
   }
 }

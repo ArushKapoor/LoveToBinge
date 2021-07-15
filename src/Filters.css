@@ -12,9 +12,9 @@
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 0.6vh;
-  padding-bottom: 1vh;
+  padding-bottom: 0.6vh;
   font-weight: bold;
-  font-size: 4vh;
+  font-size: 2.5vw;
   justify-content: space-between;
 }
 
@@ -40,7 +40,7 @@
 
 @media (max-width: 480px) {
   .filters > button {
-    font-size: 4vw;
+    font-size: 5vw;
   }
   .filters {
     margin-top: 0vh;
